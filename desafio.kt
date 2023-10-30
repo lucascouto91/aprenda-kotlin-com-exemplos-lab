@@ -17,6 +17,14 @@ data class Formacao(val nome: String, var conteudos: List<ConteudoEducacional>) 
     fun adicionarConteudo(conteudo: ConteudoEducacional) {
         conteudos.add(conteudo)
     }
+    fun exibirEstatisticas() {
+        println("Formação: $nome")
+        println("Número de inscritos: ${inscritos.size}")
+        println("Conteúdo na formação:")
+        for (conteudo in conteudos) {
+            println("${conteudo.nome} (Duração: ${conteudo.duracao} minutos), Nivel:${conteudo.nivel}")
+        }
+    }
 }
 
 fun main() {
