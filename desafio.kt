@@ -28,6 +28,7 @@ data class Formacao(val nome: String, var conteudos: MutableList<ConteudoEducaci
     fun listarInscritos() {
         println("Lista de Inscritos na Formação $nome:")
         inscritos.forEach { println("- ${it.nome}") }
+    }
 }
 
 fun main() {
