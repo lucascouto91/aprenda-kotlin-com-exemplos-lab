@@ -25,6 +25,9 @@ data class Formacao(val nome: String, var conteudos: MutableList<ConteudoEducaci
             println("${conteudo.nome} (Duração: ${conteudo.duracao} minutos), Nivel:${conteudo.nivel}")
         }
     }
+    fun listarInscritos() {
+        println("Lista de Inscritos na Formação $nome:")
+        inscritos.forEach { println("- ${it.nome}") }
 }
 
 fun main() {
@@ -44,4 +47,5 @@ fun main() {
     formacao1.adicionarConteudo(ConteudoEducacional("O Poder das Funções em Kotlin", 100, Nivel.DIFICIL))
     
     formacao1.exibirEstatisticas()
+    formacao1.listarInscritos()
 }
